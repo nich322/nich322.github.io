@@ -13,7 +13,6 @@
         html { scroll-behavior: smooth; }
         .video-overlay { background: rgba(0, 0, 0, 0.25); }
         
-        /* Ensures the video covers the screen without stretching */
         .video-bg {
             position: absolute;
             top: 50%;
@@ -46,15 +45,22 @@
         </div>
     </nav>
 
-    <header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        <video autoplay muted loop playsinline class="video-bg">
-            <source src="WEBSITE HEADER.mp4" type="video/mp4">
+    <header class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-stone-200">
+        <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            webkit-playsinline
+            preload="auto"
+            class="video-bg">
+            <source src="website-header.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         
         <div class="absolute z-20 w-full h-full video-overlay"></div>
 
-        <div class="relative z-30 text-center text-white">
+        <div class="relative z-30 text-center text-white px-4">
             <h2 class="serif text-5xl md:text-7xl mb-4 tracking-tight">UNTITLED MEDIA COMPANY</h2>
             <p class="uppercase tracking-[0.4em] text-sm font-light">This is our current tagline</p>
         </div>
