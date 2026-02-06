@@ -7,21 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #F5F2ED; /* Soft Tan Background */
-            color: #333;
-        }
+        body { background-color: #F5F2ED; color: #333; }
         .serif { font-family: 'Playfair Display', serif; }
         .sans { font-family: 'Inter', sans-serif; }
-        
         html { scroll-behavior: smooth; }
-
-        .video-overlay {
-            background: rgba(0, 0, 0, 0.2); 
-        }
-
-        /* Essential for making the Google Drive video fit the screen */
-        .video-container {
+        .video-overlay { background: rgba(0, 0, 0, 0.25); }
+        
+        /* Ensures the video covers the screen without stretching */
+        .video-bg {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -30,6 +23,7 @@
             width: auto;
             height: auto;
             transform: translate(-50%, -50%);
+            object-fit: cover;
             z-index: 10;
         }
     </style>
@@ -42,11 +36,9 @@
                 <a href="#portfolio" class="hover:opacity-50 transition">Portfolio</a>
                 <a href="#about" class="hover:opacity-50 transition">About</a>
             </div>
-
             <div class="w-1/3 text-center">
                 <h1 class="serif text-2xl tracking-tighter font-bold">UNTITLED MEDIA COMPANY</h1>
             </div>
-
             <div class="flex space-x-8 uppercase tracking-widest text-xs font-light w-1/3 justify-end">
                 <a href="#pricing" class="hover:opacity-50 transition">Pricing</a>
                 <a href="#contact" class="hover:opacity-50 transition">Contact</a>
@@ -55,17 +47,16 @@
     </nav>
 
     <header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        <iframe 
-            src="https://drive.google.com/file/d/1LdSDJjjf07vXdoSVfmMcgIZU8REeLffN/preview" 
-            class="video-container"
-            allow="autoplay">
-        </iframe>
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="hero-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         
         <div class="absolute z-20 w-full h-full video-overlay"></div>
 
         <div class="relative z-30 text-center text-white">
-            <h2 class="serif text-5xl md:text-7xl mb-4">UNTITLED MEDIA COMPANY</h2>
-            <p class="uppercase tracking-[0.3em] text-sm font-light">This is our current tagline</p>
+            <h2 class="serif text-5xl md:text-7xl mb-4 tracking-tight">UNTITLED MEDIA COMPANY</h2>
+            <p class="uppercase tracking-[0.4em] text-sm font-light">This is our current tagline</p>
         </div>
     </header>
 
@@ -81,27 +72,23 @@
     <section id="pricing" class="py-32 bg-stone-100 px-6">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="serif text-4xl mb-16">Our Packages</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                 <div>
                     <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic">Image Placeholder</div>
                     <h3 class="serif text-2xl mb-2">Highlight Reel</h3>
                     <p class="text-sm text-stone-500 px-4">A high-energy, 3-5 minute cinematic summary of your entire celebration.</p>
                 </div>
-
                 <div>
                     <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic">Image Placeholder</div>
                     <h3 class="serif text-2xl mb-2">Short Video</h3>
                     <p class="text-sm text-stone-500 px-4">An 8-10 minute film capturing the key speeches, ceremony highlights, and dances.</p>
                 </div>
-
                 <div>
                     <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic">Image Placeholder</div>
                     <h3 class="serif text-2xl mb-2">Long Video</h3>
                     <p class="text-sm text-stone-500 px-4">A documentary-style edit including the full ceremony and all reception toasts.</p>
                 </div>
             </div>
-
             <a href="#portfolio" class="inline-block border border-stone-800 px-10 py-4 uppercase tracking-widest text-xs hover:bg-stone-800 hover:text-white transition">
                 View Portfolio
             </a>
