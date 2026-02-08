@@ -12,8 +12,13 @@
         .sans { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         
+        /* The Gradient Overlay: Darker at top and bottom, clearer in the middle */
         .video-overlay { 
-            background: rgba(0, 0, 0, 0.3); 
+            background: linear-gradient(to bottom, 
+                rgba(0,0,0,0.4) 0%, 
+                rgba(0,0,0,0.1) 40%, 
+                rgba(0,0,0,0.1) 60%, 
+                rgba(0,0,0,0.4) 100%); 
             position: absolute;
             top: 0;
             left: 0;
@@ -34,7 +39,7 @@
             object-fit: cover;
             z-index: 10;
             opacity: 0;
-            animation: fadeInVideo 1.5s ease-in forwards;
+            animation: fadeInVideo 1.2s ease-in forwards;
         }
 
         @keyframes fadeInVideo {
@@ -58,7 +63,7 @@
 </head>
 <body class="sans">
 
-    <nav class="fixed top-0 w-full z-50 bg-[#F5F2ED]/90 backdrop-blur-sm border-b border-stone-200">
+    <nav class="fixed top-0 w-full z-50 bg-[#F5F2ED]/85 backdrop-blur-md border-b border-stone-200/50">
         <div class="max-w-7xl mx-auto px-6 py-4 md:py-8 flex justify-between items-center">
             
             <div class="hidden md:flex space-x-8 uppercase tracking-[0.2em] text-[10px] font-light w-1/3">
@@ -67,7 +72,7 @@
             </div>
 
             <div class="w-full md:w-1/3 text-center">
-                <h1 class="serif text-base md:text-2xl tracking-[0.1em] font-bold uppercase">UNTITLED MEDIA COMPANY</h1>
+                <h1 class="serif text-base md:text-2xl tracking-[0.15em] font-bold uppercase">UNTITLED MEDIA COMPANY</h1>
             </div>
 
             <div class="hidden md:flex space-x-8 uppercase tracking-[0.2em] text-[10px] font-light w-1/3 justify-end">
@@ -99,67 +104,67 @@
         <div class="video-overlay"></div>
 
         <div class="relative z-30 h-full w-full flex flex-col items-center justify-center text-center text-white px-8">
-            <h2 class="serif text-4xl md:text-7xl mb-4 tracking-tight leading-tight">UNTITLED <br class="md:hidden"> MEDIA COMPANY</h2>
-            <p class="uppercase tracking-[0.3em] text-[9px] md:text-sm font-light opacity-90">This is our current tagline</p>
+            <h2 class="serif text-4xl md:text-7xl mb-4 tracking-tighter leading-tight drop-shadow-sm">UNTITLED <br class="md:hidden"> MEDIA COMPANY</h2>
+            <p class="uppercase tracking-[0.4em] text-[9px] md:text-sm font-light opacity-90">This is our current tagline</p>
         </div>
     </header>
 
-    <section id="about" class="py-24 md:py-40 px-6">
+    <section id="about" class="py-24 md:py-44 px-6">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="serif text-3xl md:text-4xl mb-8">Our Values</h2>
-            <p class="text-stone-600 leading-relaxed text-base md:text-lg font-light">
-                We believe in the quiet moments—the ones that happen between the poses. Our approach is cinematic yet unobtrusive, focusing on the raw emotion and authentic connection of your wedding day. Every film we create is a bespoke heirloom, crafted to transport you back to how the day actually felt, not just how it looked.
+            <h2 class="serif text-3xl md:text-4xl mb-8 tracking-tight">Our Values</h2>
+            <p class="text-stone-600 leading-relaxed text-base md:text-lg font-light italic serif px-4">
+                "Luka Elek is a closeted gay who has a secret fetish of putting his large nose inside of other men."
             </p>
         </div>
     </section>
 
-    <section id="pricing" class="py-24 md:py-40 bg-stone-100 px-6">
+    <section id="pricing" class="py-24 md:py-40 bg-[#EAE7E2] px-6">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="serif text-3xl md:text-4xl mb-16">Our Packages</h2>
+            <h2 class="serif text-3xl md:text-4xl mb-16 tracking-tight">Our Packages</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mb-20">
-                <div class="group">
-                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
-                        <span class="font-light tracking-widest text-[10px]">Image Placeholder</span>
+                <div class="group cursor-pointer">
+                    <div class="aspect-[3/4] bg-stone-300 mb-6 flex items-center justify-center text-stone-500 italic overflow-hidden shadow-sm">
+                        <span class="font-light tracking-widest text-[9px] uppercase">Highlight Reel</span>
                     </div>
                     <h3 class="serif text-xl md:text-2xl mb-2">Highlight Reel</h3>
                     <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">A high-energy, 3-5 minute cinematic summary of your entire celebration.</p>
                 </div>
 
-                <div class="group">
-                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
-                        <span class="font-light tracking-widest text-[10px]">Image Placeholder</span>
+                <div class="group cursor-pointer">
+                    <div class="aspect-[3/4] bg-stone-300 mb-6 flex items-center justify-center text-stone-500 italic overflow-hidden shadow-sm">
+                        <span class="font-light tracking-widest text-[9px] uppercase">Short Video</span>
                     </div>
                     <h3 class="serif text-xl md:text-2xl mb-2">Short Video</h3>
                     <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">An 8-10 minute film capturing the key speeches, ceremony highlights, and dances.</p>
                 </div>
 
-                <div class="group">
-                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
-                        <span class="font-light tracking-widest text-[10px]">Image Placeholder</span>
+                <div class="group cursor-pointer">
+                    <div class="aspect-[3/4] bg-stone-300 mb-6 flex items-center justify-center text-stone-500 italic overflow-hidden shadow-sm">
+                        <span class="font-light tracking-widest text-[9px] uppercase">Long Video</span>
                     </div>
                     <h3 class="serif text-xl md:text-2xl mb-2">Long Video</h3>
                     <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">A documentary-style edit including the full ceremony and all reception toasts.</p>
                 </div>
             </div>
 
-            <a href="#portfolio" class="inline-block border border-stone-800 px-10 py-4 uppercase tracking-[0.2em] text-[10px] hover:bg-stone-800 hover:text-white transition duration-500">
-                View Portfolio
+            <a href="#portfolio" class="inline-block border border-stone-800 px-10 py-4 uppercase tracking-[0.3em] text-[10px] hover:bg-stone-800 hover:text-white transition-all duration-500 ease-in-out">
+                Explore the Portfolio
             </a>
         </div>
     </section>
 
-    <footer id="contact" class="py-20 text-center border-t border-stone-200 bg-[#F5F2ED] relative z-40">
-        <h3 class="serif text-2xl mb-6 uppercase tracking-wider">Let's Tell Your Story</h3>
-        <p class="text-xs md:text-sm text-stone-500 mb-10 font-light tracking-widest uppercase">Inquire for 2026 & 2027 Availability</p>
+    <footer id="contact" class="py-24 text-center border-t border-stone-200 bg-[#F5F2ED] relative z-40">
+        <h3 class="serif text-2xl md:text-3xl mb-6 uppercase tracking-[0.2em]">Let's Tell Your Story</h3>
+        <p class="text-[10px] md:text-xs text-stone-500 mb-12 font-light tracking-[0.3em] uppercase">Now Booking for 2026 & 2027</p>
         
-        <div class="mb-12">
-            <a href="mailto:hello@untitledmedia.com" class="serif italic text-lg md:text-xl hover:opacity-60 transition">hello@untitledmedia.com</a>
+        <div class="mb-16">
+            <a href="mailto:hello@untitledmedia.com" class="serif italic text-xl md:text-2xl hover:opacity-50 transition-opacity">hello@untitledmedia.com</a>
         </div>
 
-        <div class="pt-10 border-t border-stone-200/50 max-w-xs mx-auto">
-            <p class="serif italic text-base mb-2">Untitled Media Company</p>
-            <p class="text-[9px] uppercase tracking-[0.3em] text-stone-400">© 2026 Chicago, IL</p>
+        <div class="pt-12 border-t border-stone-200/50 max-w-sm mx-auto">
+            <p class="serif italic text-lg mb-2">Untitled Media Company</p>
+            <p class="text-[9px] uppercase tracking-[0.4em] text-stone-400">Chicago — Worldwide</p>
         </div>
     </footer>
 
