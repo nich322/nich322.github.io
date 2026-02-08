@@ -11,10 +11,10 @@
         .serif { font-family: 'Playfair Display', serif; }
         .sans { font-family: 'Inter', sans-serif; }
         
-        /* Cinematic Aspect Ratio */
+        /* Cinematic Aspect Ratio for YouTube */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             background: #E5DED3;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
@@ -38,7 +38,7 @@
                 <a href="index.html#about" class="hover:opacity-50 transition">About</a>
             </div>
             <div class="w-full md:w-1/3 text-center">
-                <a href="index.html" class="serif text-lg md:text-2xl tracking-[0.15em] font-bold uppercase italic">UNTITLED MEDIA COMPANY</a>
+                <a href="index.html" class="serif text-lg md:text-2xl tracking-[0.15em] font-bold uppercase">UNTITLED MEDIA COMPANY</a>
             </div>
             <div class="hidden md:flex space-x-8 uppercase tracking-[0.2em] text-[10px] font-light w-1/3 justify-end">
                 <a href="index.html#pricing" class="hover:opacity-50 transition">Pricing</a>
@@ -58,8 +58,9 @@
 
             <div class="video-wrapper mb-12 md:mb-20">
                 <iframe 
-                    src="https://drive.google.com/file/d/1LdSDJjjf07vXdoSVfmMcgIZU8REeLffN/preview" 
-                    allow="autoplay" 
+                    src="https://www.youtube.com/embed/gIvMNCaXq2E?rel=0&modestbranding=1&showinfo=0" 
+                    title="The Grays Wedding Film"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen>
                 </iframe>
             </div>
@@ -72,7 +73,7 @@
                 </p>
                 
                 <a href="index.html#contact" class="inline-block border border-stone-800 px-12 py-5 uppercase tracking-[0.3em] text-[10px] hover:bg-stone-800 hover:text-white transition-all duration-500">
-                    Book Your Story
+                    Inquire for your date
                 </a>
             </div>
 
