@@ -7,12 +7,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
+        /* The #E5DED3 is a slightly darker "luxury tan" to ensure white text is visible if video fails */
         body { background-color: #F5F2ED; color: #333; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
         .sans { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         
-        /* Subtle overlay to make white text pop over bright video frames */
         .video-overlay { background: rgba(0, 0, 0, 0.3); }
         
         .video-bg {
@@ -26,9 +26,9 @@
             transform: translate(-50%, -50%);
             object-fit: cover;
             z-index: 10;
+            background-color: #E5DED3; /* Fallback color while loading */
         }
 
-        /* Fixes the "jumping" hero height on mobile browsers */
         .hero-height {
             height: 100vh;
             height: 100svh;
@@ -56,64 +56,6 @@
         </div>
         
         <div class="md:hidden flex justify-center space-x-6 pb-4 uppercase tracking-[0.2em] text-[9px] font-medium border-t border-stone-100 pt-3">
-            <a href="#portfolio" class="hover:text-stone-500">Portfolio</a>
-            <a href="#about" class="hover:text-stone-500">About</a>
-            <a href="#pricing" class="hover:text-stone-500">Pricing</a>
-            <a href="#contact" class="hover:text-stone-500">Contact</a>
-        </div>
-    </nav>
-
-    <header class="relative hero-height w-full flex items-center justify-center overflow-hidden bg-stone-200">
-        <video 
-            autoplay 
-            muted 
-            loop 
-            playsinline 
-            webkit-playsinline
-            preload="auto"
-            class="video-bg">
-            <source src="website-header.mp4" type="video/mp4">
-        </video>
-        
-        <div class="absolute z-20 w-full h-full video-overlay"></div>
-
-        <div class="relative z-30 text-center text-white px-8">
-            <h2 class="serif text-3xl md:text-7xl mb-4 tracking-tight leading-tight">UNTITLED <br class="md:hidden"> MEDIA COMPANY</h2>
-            <p class="uppercase tracking-[0.3em] text-[9px] md:text-sm font-light opacity-90">This is our current tagline</p>
-        </div>
-    </header>
-
-    <section id="about" class="py-20 md:py-32 px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="serif text-3xl md:text-4xl mb-6 md:mb-8">Our Values</h2>
-            <p class="text-stone-600 leading-relaxed text-base md:text-lg font-light">
-                We believe in the quiet moments—the ones that happen between the poses. Our approach is cinematic yet unobtrusive, focusing on the raw emotion and authentic connection of your wedding day. Every film we create is a bespoke heirloom, crafted to transport you back to how the day actually felt, not just how it looked.
-            </p>
-        </div>
-    </section>
-
-    <section id="pricing" class="py-20 md:py-32 bg-stone-100 px-6">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="serif text-3xl md:text-4xl mb-12 md:mb-16">Our Packages</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
-                <div class="group">
-                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
-                        <span class="group-hover:scale-110 transition-transform duration-500">Image Placeholder</span>
-                    </div>
-                    <h3 class="serif text-xl md:text-2xl mb-2">Highlight Reel</h3>
-                    <p class="text-xs md:text-sm text-stone-500 px-4 font-light">A high-energy, 3-5 minute cinematic summary of your entire celebration.</p>
-                </div>
-
-                <div class="group">
-                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
-                        <span class="group-hover:scale-110 transition-transform duration-500">Image Placeholder</span>
-                    </div>
-                    <h3 class="serif text-xl md:text-2xl mb-2">Short Video</h3>
-                    <p class="text-xs md:text-sm text-stone-500 px-4 font-light">An 8-10 minute film capturing the key speeches, ceremony highlights, and dances.</p>
-                </div>
-
-                <div class="group">
-                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
-                        <span class="group-hover:scale-110 transition-transform duration-500">Image Placeholder</span>
-                    </div>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#pricing">
