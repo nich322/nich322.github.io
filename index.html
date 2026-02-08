@@ -7,13 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* The #E5DED3 is a slightly darker "luxury tan" to ensure white text is visible if video fails */
-        body { background-color: #F5F2ED; color: #333; overflow-x: hidden; }
+        body { background-color: #F5F2ED; color: #333; margin: 0; padding: 0; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
         .sans { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         
-        .video-overlay { background: rgba(0, 0, 0, 0.3); }
+        .video-overlay { 
+            background: rgba(0, 0, 0, 0.3); 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 20;
+        }
         
         .video-bg {
             position: absolute;
@@ -26,12 +33,21 @@
             transform: translate(-50%, -50%);
             object-fit: cover;
             z-index: 10;
-            background-color: #E5DED3; /* Fallback color while loading */
         }
 
         .hero-height {
+            position: relative;
             height: 100vh;
             height: 100svh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Ensuring content sections have enough padding and are above video layers */
+        section {
+            position: relative;
+            z-index: 30;
+            background-color: #F5F2ED;
         }
     </style>
 </head>
@@ -58,4 +74,89 @@
         <div class="md:hidden flex justify-center space-x-6 pb-4 uppercase tracking-[0.2em] text-[9px] font-medium border-t border-stone-100 pt-3">
             <a href="#portfolio">Portfolio</a>
             <a href="#about">About</a>
-            <a href="#pricing">
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero-height bg-stone-300">
+        <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            webkit-playsinline 
+            preload="auto" 
+            class="video-bg">
+            <source src="website-header.mp4" type="video/mp4">
+        </video>
+        
+        <div class="video-overlay"></div>
+
+        <div class="relative z-30 h-full w-full flex flex-col items-center justify-center text-center text-white px-8">
+            <h2 class="serif text-4xl md:text-7xl mb-4 tracking-tight leading-tight">UNTITLED <br class="md:hidden"> MEDIA COMPANY</h2>
+            <p class="uppercase tracking-[0.3em] text-[9px] md:text-sm font-light opacity-90">This is our current tagline</p>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 md:py-40 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="serif text-3xl md:text-4xl mb-8">Our Values</h2>
+            <p class="text-stone-600 leading-relaxed text-base md:text-lg font-light">
+                We believe in the quiet moments—the ones that happen between the poses. Our approach is cinematic yet unobtrusive, focusing on the raw emotion and authentic connection of your wedding day. Every film we create is a bespoke heirloom, crafted to transport you back to how the day actually felt, not just how it looked.
+            </p>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 md:py-40 bg-stone-100 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="serif text-3xl md:text-4xl mb-16">Our Packages</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mb-20">
+                <div class="group">
+                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
+                        <span class="font-light tracking-widest text-[10px]">Image Placeholder</span>
+                    </div>
+                    <h3 class="serif text-xl md:text-2xl mb-2">Highlight Reel</h3>
+                    <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">A high-energy, 3-5 minute cinematic summary of your entire celebration.</p>
+                </div>
+
+                <div class="group">
+                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
+                        <span class="font-light tracking-widest text-[10px]">Image Placeholder</span>
+                    </div>
+                    <h3 class="serif text-xl md:text-2xl mb-2">Short Video</h3>
+                    <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">An 8-10 minute film capturing the key speeches, ceremony highlights, and dances.</p>
+                </div>
+
+                <div class="group">
+                    <div class="aspect-[3/4] bg-stone-200 mb-6 flex items-center justify-center text-stone-400 italic overflow-hidden">
+                        <span class="font-light tracking-widest text-[10px]">Image Placeholder</span>
+                    </div>
+                    <h3 class="serif text-xl md:text-2xl mb-2">Long Video</h3>
+                    <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">A documentary-style edit including the full ceremony and all reception toasts.</p>
+                </div>
+            </div>
+
+            <a href="#portfolio" class="inline-block border border-stone-800 px-10 py-4 uppercase tracking-[0.2em] text-[10px] hover:bg-stone-800 hover:text-white transition duration-500">
+                View Portfolio
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-20 text-center border-t border-stone-200 bg-[#F5F2ED] relative z-40">
+        <h3 class="serif text-2xl mb-6 uppercase tracking-wider">Let's Tell Your Story</h3>
+        <p class="text-xs md:text-sm text-stone-500 mb-10 font-light tracking-widest uppercase">Inquire for 2026 & 2027 Availability</p>
+        
+        <div class="mb-12">
+            <a href="mailto:hello@untitledmedia.com" class="serif italic text-lg md:text-xl hover:opacity-60 transition">hello@untitledmedia.com</a>
+        </div>
+
+        <div class="pt-10 border-t border-stone-200/50 max-w-xs mx-auto">
+            <p class="serif italic text-base mb-2">Untitled Media Company</p>
+            <p class="text-[9px] uppercase tracking-[0.3em] text-stone-400">© 2026 Chicago, IL</p>
+        </div>
+    </footer>
+
+</body>
+</html>
