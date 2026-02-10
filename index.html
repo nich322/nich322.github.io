@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This Thing of Yours | Wedding Videography</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body { background-color: #F5F2ED; color: #333; margin: 0; padding: 0; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
@@ -27,12 +27,14 @@
 
         .hero-height { position: relative; height: 100vh; height: 100svh; width: 100%; overflow: hidden; }
 
-        /* The Calligraphy Loop Flourish */
-        .flourish {
-            display: flex; justify-content: center; align-items: center;
-            padding-top: 3rem; padding-bottom: 1rem; opacity: 0.3;
+        /* Flourish Styling */
+        .flourish-img {
+            width: 180px; /* Adjust size as needed */
+            height: auto;
+            margin: 3rem auto 0 auto;
+            opacity: 0.5; /* Makes the PNG feel subtle like a watermark */
+            display: block;
         }
-        .flourish svg { width: 120px; height: auto; color: #78716c; }
 
         section { position: relative; z-index: 30; }
     </style>
@@ -62,7 +64,7 @@
         </video>
         <div class="video-overlay"></div>
         <div class="relative z-30 h-full w-full flex flex-col items-center justify-center text-center text-white px-8">
-            <h2 class="serif text-3xl md:text-6xl mb-6 tracking-[0.25em] leading-tight drop-shadow-sm uppercase font-bold italic">This Thing <br class="md:hidden"> of Yours</h2>
+            <h2 class="serif text-4xl md:text-7xl mb-6 tracking-[0.25em] leading-tight drop-shadow-sm uppercase font-bold">This Thing <br class="md:hidden"> of Yours</h2>
             <p class="serif uppercase tracking-[0.6em] text-[10px] md:text-xs font-light opacity-90 drop-shadow-md">CHICAGO — INDIANA</p>
         </div>
     </header>
@@ -70,24 +72,19 @@
     <section id="about" class="py-24 md:py-32 px-6 bg-[#F5F2ED]">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="serif text-2xl md:text-3xl mb-12 tracking-[0.2em] uppercase text-stone-400 font-light">Our Values</h2>
-            <p class="text-stone-600 leading-relaxed text-base md:text-lg font-light serif px-4 italic">
+            <p class="text-stone-600 leading-relaxed text-base md:text-lg font-light serif px-4">
                 At This Thing of Yours, your experience is just as important as the final product. We anchor our work in transparency and responsiveness, ensuring you are heard at every stage of the journey. We prioritize clear, consistent communication and a commitment to delivery timelines that respect the momentum of your celebration.
                 <br><br>
-                <strong class="text-stone-900 not-italic">Above all, you are the singular focus of our day.</strong>
+                <strong class="text-stone-900">Above all, you are the singular focus of our day.</strong>
             </p>
             
-            <div class="flourish">
-                <svg viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 12C20 12 35 2 50 12C65 22 80 12 100 12" stroke="currentColor" stroke-width="0.5"/>
-                    <path d="M40 12C45 8 55 8 60 12C55 16 45 16 40 12Z" stroke="currentColor" stroke-width="0.5"/>
-                </svg>
-            </div>
+            <img src="flourish.png" alt="Decorative flourish" class="flourish-img">
         </div>
     </section>
 
     <section class="py-24 md:py-44 px-6 bg-[#EAE7E2]">
-        <div class="max-w-4xl mx-auto">
-            <div class="border border-stone-300/60 p-10 md:p-20 text-center bg-[#F5F2ED]/30">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="border border-stone-300/60 p-10 md:p-20 bg-[#F5F2ED]/30">
                 <h2 class="serif text-3xl md:text-5xl mb-12 tracking-tight italic">Why This Thing of Yours?</h2>
                 <div class="space-y-8 text-stone-600 leading-relaxed text-base md:text-xl font-light serif">
                     <p>While many other companies operate on strict schedules and hourly constraints, we believe your story shouldn't be governed by a clock. A wedding day is a living, breathing event that shouldn't be burdened by the stress of filming windows or missed moments.</p>
@@ -101,17 +98,12 @@
                 </div>
             </div>
             
-            <div class="flourish mt-8">
-                <svg viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 12C20 12 35 2 50 12C65 22 80 12 100 12" stroke="currentColor" stroke-width="0.5"/>
-                    <path d="M40 12C45 8 55 8 60 12C55 16 45 16 40 12Z" stroke="currentColor" stroke-width="0.5"/>
-                </svg>
-            </div>
+            <img src="flourish.png" alt="Decorative flourish" class="flourish-img mt-12">
         </div>
     </section>
 
-    <section id="pricing" class="py-24 md:py-40 bg-[#F5F2ED] px-6">
-        <div class="max-w-6xl mx-auto text-center">
+    <section id="pricing" class="py-24 md:py-40 bg-[#F5F2ED] px-6 text-center">
+        <div class="max-w-6xl mx-auto">
             <h2 class="serif text-2xl md:text-3xl mb-16 tracking-[0.2em] uppercase text-stone-400 font-light">Our Packages</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mb-20">
                 <div class="group cursor-pointer">
@@ -136,13 +128,8 @@
                     <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">A documentary-style edit including the full ceremony and all reception toasts.</p>
                 </div>
             </div>
-
-            <div class="flourish">
-                <svg viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 12C20 12 35 2 50 12C65 22 80 12 100 12" stroke="currentColor" stroke-width="0.5"/>
-                    <path d="M40 12C45 8 55 8 60 12C55 16 45 16 40 12Z" stroke="currentColor" stroke-width="0.5"/>
-                </svg>
-            </div>
+            
+            <img src="flourish.png" alt="Decorative flourish" class="flourish-img">
         </div>
     </section>
 
