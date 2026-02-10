@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This Thing of Yours | Wedding Videography</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body { background-color: #F5F2ED; color: #333; margin: 0; padding: 0; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
@@ -13,66 +13,45 @@
         html { scroll-behavior: smooth; }
         
         .video-overlay { 
-            background: linear-gradient(to bottom, 
-                rgba(0,0,0,0.4) 0%, 
-                rgba(0,0,0,0.1) 40%, 
-                rgba(0,0,0,0.1) 60%, 
-                rgba(0,0,0,0.4) 100%); 
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            z-index: 20;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.4) 100%); 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 20;
         }
         
         .video-bg {
-            position: absolute;
-            top: 50%; left: 50%;
-            min-width: 100%; min-height: 100%;
-            width: auto; height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            z-index: 10;
-            opacity: 0;
-            animation: fadeInVideo 1.2s ease-in forwards;
+            position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%;
+            width: auto; height: auto; transform: translate(-50%, -50%);
+            object-fit: cover; z-index: 10; opacity: 0; animation: fadeInVideo 1.2s ease-in forwards;
         }
 
         @keyframes fadeInVideo { to { opacity: 1; } }
 
-        .hero-height {
-            position: relative;
-            height: 100vh;
-            height: 100svh;
-            width: 100%;
-            overflow: hidden;
-        }
+        .hero-height { position: relative; height: 100vh; height: 100svh; width: 100%; overflow: hidden; }
 
-        section { position: relative; z-index: 30; background-color: #F5F2ED; }
+        /* The Swirl Divider Style */
+        .flourish {
+            display: flex; justify-content: center; align-items: center;
+            padding-top: 2rem; padding-bottom: 2rem; opacity: 0.4;
+        }
+        .flourish svg { width: 60px; height: auto; fill: #78716c; }
+
+        section { position: relative; z-index: 30; }
     </style>
 </head>
-<body class="sans">
+<body class="sans text-stone-800">
 
     <nav class="fixed top-0 w-full z-50 bg-[#F5F2ED]/85 backdrop-blur-md border-b border-stone-200/50">
         <div class="max-w-7xl mx-auto px-6 py-4 md:py-8 flex justify-between items-center">
-            
             <div class="hidden md:flex space-x-8 uppercase tracking-[0.2em] text-[10px] font-light w-1/3">
                 <a href="portfolio.html" class="hover:opacity-50 transition">Portfolio</a>
                 <a href="#about" class="hover:opacity-50 transition">About</a>
             </div>
-
             <div class="w-full md:w-1/3 text-center">
                 <h1 class="serif text-base md:text-xl tracking-[0.4em] font-bold uppercase">LOGO</h1>
             </div>
-
             <div class="hidden md:flex space-x-8 uppercase tracking-[0.2em] text-[10px] font-light w-1/3 justify-end">
                 <a href="#pricing" class="hover:opacity-50 transition">Pricing</a>
                 <a href="#contact" class="hover:opacity-50 transition">Contact</a>
             </div>
-        </div>
-        
-        <div class="md:hidden flex justify-center space-x-6 pb-4 uppercase tracking-[0.2em] text-[9px] font-medium border-t border-stone-100 pt-3">
-            <a href="portfolio.html">Portfolio</a>
-            <a href="#about">About</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
         </div>
     </nav>
 
@@ -81,55 +60,53 @@
             <source src="website-header.mp4" type="video/mp4" media="(min-width: 1024px)">
             <source src="website-header-mobile.mp4" type="video/mp4">
         </video>
-        
         <div class="video-overlay"></div>
-
         <div class="relative z-30 h-full w-full flex flex-col items-center justify-center text-center text-white px-8">
-            <h2 class="serif text-3xl md:text-6xl mb-6 tracking-[0.25em] leading-tight drop-shadow-sm uppercase font-bold">This Thing <br class="md:hidden"> of Yours</h2>
+            <h2 class="serif text-3xl md:text-6xl mb-6 tracking-[0.25em] leading-tight drop-shadow-sm uppercase font-bold italic">This Thing <br class="md:hidden"> of Yours</h2>
             <p class="serif uppercase tracking-[0.6em] text-[10px] md:text-xs font-light opacity-90 drop-shadow-md">CHICAGO — INDIANA</p>
         </div>
     </header>
 
-    <section id="about" class="py-24 md:py-44 px-6 border-b border-stone-100">
+    <section id="about" class="py-24 md:py-32 px-6 bg-[#F5F2ED]">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="serif text-3xl md:text-4xl mb-8 tracking-tight uppercase">Our Values</h2>
-            <p class="text-stone-600 leading-relaxed text-base md:text-lg font-light serif px-4">
+            <h2 class="serif text-2xl md:text-3xl mb-12 tracking-[0.2em] uppercase text-stone-400 font-light">Our Values</h2>
+            <p class="text-stone-600 leading-relaxed text-base md:text-lg font-light serif px-4 italic">
                 At This Thing of Yours, your experience is just as important as the final product. We anchor our work in transparency and responsiveness, ensuring you are heard at every stage of the journey. We prioritize clear, consistent communication and a commitment to delivery timelines that respect the momentum of your celebration.
                 <br><br>
-                <strong>Above all, you are the singular focus of our day.</strong>
+                <strong class="text-stone-900 not-italic">Above all, you are the singular focus of our day.</strong>
             </p>
-        </div>
-    </section>
-
-    <section class="py-24 md:py-44 px-6 bg-[#F5F2ED]">
-        <div class="max-w-4xl mx-auto">
-            <div class="border border-stone-200 p-10 md:p-20 text-center">
-                <h2 class="serif text-3xl md:text-5xl mb-12 tracking-tight italic">Why This Thing of Yours?</h2>
-                <div class="space-y-8 text-stone-600 leading-relaxed text-base md:text-xl font-light serif">
-                    <p>
-                        While many other companies operate on strict schedules and hourly constraints, we believe your story shouldn't be governed by a clock. A wedding day is a living, breathing event that shouldn't be burdened by the stress of filming windows or missed moments.
-                    </p>
-                    <p>
-                        Our commitment is to the day, not the hour. No matter the package you choose, we are there from the first morning light until the final dance, ensuring every speech and every celebration is captured in full. To honor the entirety of your day, we include a complimentary string-out cut of every milestone moment.
-                    </p>
-                    <p class="pt-8 border-t border-stone-100">
-                        For those hosting a post-wedding celebration the following morning, we offer an exclusive <span class="italic font-medium text-stone-900">"Next-Day Premiere"</span> service. For an additional fee, we will deliver an edited highlight reel overnight to share with your guests while the memories are still fresh.
-                    </p>
-                </div>
-                
-                <div class="mt-16">
-                    <a href="portfolio.html" class="inline-block border border-stone-800 px-10 py-4 uppercase tracking-[0.3em] text-[10px] hover:bg-stone-800 hover:text-white transition-all duration-500 ease-in-out">
-                        View the Work
-                    </a>
-                </div>
+            
+            <div class="flourish mt-12">
+                <svg viewBox="0 0 100 20"><path d="M0 10 Q25 0 50 10 T100 10" fill="none" stroke="currentColor" stroke-width="0.5"/></svg>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-24 md:py-40 bg-[#EAE7E2] px-6">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="serif text-3xl md:text-4xl mb-16 tracking-tight uppercase">Our Packages</h2>
+    <section class="py-24 md:py-44 px-6 bg-[#EAE7E2]">
+        <div class="max-w-4xl mx-auto">
+            <div class="border border-stone-300/60 p-10 md:p-20 text-center bg-[#F5F2ED]/30">
+                <h2 class="serif text-3xl md:text-5xl mb-12 tracking-tight italic">Why This Thing of Yours?</h2>
+                <div class="space-y-8 text-stone-600 leading-relaxed text-base md:text-xl font-light serif">
+                    <p>While many other companies operate on strict schedules and hourly constraints, we believe your story shouldn't be governed by a clock. A wedding day is a living, breathing event that shouldn't be burdened by the stress of filming windows or missed moments.</p>
+                    <p>Our commitment is to the day, not the hour. No matter the package you choose, we are there from the first morning light until the final dance, ensuring every speech and every celebration is captured in full. To honor the entirety of your day, we include a complimentary string-out cut of every milestone moment.</p>
+                    <p class="pt-8 border-t border-stone-300/40">
+                        For those hosting a post-wedding celebration the following morning, we offer an exclusive <span class="italic font-medium text-stone-900">"Next-Day Premiere"</span> service. For an additional fee, we will deliver an edited highlight reel overnight to share with your guests while the memories are still fresh.
+                    </p>
+                </div>
+                <div class="mt-16">
+                    <a href="portfolio.html" class="inline-block border border-stone-800 px-10 py-4 uppercase tracking-[0.3em] text-[10px] hover:bg-stone-800 hover:text-white transition-all duration-500 ease-in-out">View the Work</a>
+                </div>
+            </div>
             
+            <div class="flourish mt-16">
+                <svg viewBox="0 0 100 20"><path d="M0 10 Q25 0 50 10 T100 10" fill="none" stroke="currentColor" stroke-width="0.5"/></svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 md:py-40 bg-[#F5F2ED] px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="serif text-2xl md:text-3xl mb-16 tracking-[0.2em] uppercase text-stone-400 font-light">Our Packages</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mb-20">
                 <div class="group cursor-pointer">
                     <div class="aspect-[3/4] bg-stone-300 mb-6 flex items-center justify-center text-stone-500 italic overflow-hidden shadow-sm">
@@ -138,7 +115,6 @@
                     <h3 class="serif text-xl md:text-2xl mb-2">Highlight Reel</h3>
                     <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">A high-energy, 3-5 minute cinematic summary of your entire celebration.</p>
                 </div>
-
                 <div class="group cursor-pointer">
                     <div class="aspect-[3/4] bg-stone-300 mb-6 flex items-center justify-center text-stone-500 italic overflow-hidden shadow-sm">
                         <span class="font-light tracking-widest text-[9px] uppercase">Short Video</span>
@@ -146,7 +122,6 @@
                     <h3 class="serif text-xl md:text-2xl mb-2">Short Video</h3>
                     <p class="text-xs md:text-sm text-stone-500 px-4 font-light leading-relaxed">An 8-10 minute film capturing the key speeches, ceremony highlights, and dances.</p>
                 </div>
-
                 <div class="group cursor-pointer">
                     <div class="aspect-[3/4] bg-stone-300 mb-6 flex items-center justify-center text-stone-500 italic overflow-hidden shadow-sm">
                         <span class="font-light tracking-widest text-[9px] uppercase">Long Video</span>
@@ -158,15 +133,13 @@
         </div>
     </section>
 
-    <footer id="contact" class="py-24 text-center border-t border-stone-200 bg-[#F5F2ED] relative z-40">
+    <footer id="contact" class="py-24 text-center border-t border-stone-200 bg-[#EAE7E2] relative z-40">
         <h3 class="serif text-2xl md:text-3xl mb-6 uppercase tracking-[0.4em] font-bold">This Thing of Yours</h3>
         <p class="serif text-[10px] md:text-xs text-stone-500 mb-12 font-light tracking-[0.3em] uppercase">Now Booking for 2026 & 2027</p>
-        
         <div class="mb-16">
             <a href="mailto:hello@thisthingofyours.com" class="serif italic text-xl md:text-2xl hover:opacity-50 transition-opacity">hello@thisthingofyours.com</a>
         </div>
-
-        <div class="pt-12 border-t border-stone-200/50 max-w-sm mx-auto">
+        <div class="pt-12 border-t border-stone-300/50 max-w-sm mx-auto">
             <p class="serif italic text-lg mb-2">This Thing of Yours</p>
             <p class="serif text-[9px] uppercase tracking-[0.4em] text-stone-400">Chicago — Indiana</p>
         </div>
