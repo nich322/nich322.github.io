@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNTITLED MEDIA COMPANY | Wedding Videography</title>
+    <title>This Thing of Yours | Wedding Videography</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body { background-color: #F5F2ED; color: #333; margin: 0; padding: 0; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
+        .script { font-family: 'Pinyon Script', cursive; }
         .sans { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         
-        /* Gradient Overlay for Navigation and Text clarity */
         .video-overlay { 
             background: linear-gradient(to bottom, 
                 rgba(0,0,0,0.4) 0%, 
@@ -42,9 +42,7 @@
             animation: fadeInVideo 1.2s ease-in forwards;
         }
 
-        @keyframes fadeInVideo {
-            to { opacity: 1; }
-        }
+        @keyframes fadeInVideo { to { opacity: 1; } }
 
         .hero-height {
             position: relative;
@@ -54,17 +52,13 @@
             overflow: hidden;
         }
 
-        section {
-            position: relative;
-            z-index: 30;
-            background-color: #F5F2ED;
-        }
+        section { position: relative; z-index: 30; background-color: #F5F2ED; }
     </style>
 </head>
 <body class="sans">
 
     <nav class="fixed top-0 w-full z-50 bg-[#F5F2ED]/85 backdrop-blur-md border-b border-stone-200/50">
-        <div class="max-w-7xl mx-auto px-6 py-4 md:py-8 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-4 md:py-6 flex justify-between items-center">
             
             <div class="hidden md:flex space-x-8 uppercase tracking-[0.2em] text-[10px] font-light w-1/3">
                 <a href="portfolio.html" class="hover:opacity-50 transition">Portfolio</a>
@@ -72,7 +66,7 @@
             </div>
 
             <div class="w-full md:w-1/3 text-center">
-                <h1 class="serif text-base md:text-2xl tracking-[0.15em] font-bold uppercase">UNTITLED MEDIA COMPANY</h1>
+                <h1 class="script text-3xl md:text-4xl">This Thing of Yours</h1>
             </div>
 
             <div class="hidden md:flex space-x-8 uppercase tracking-[0.2em] text-[10px] font-light w-1/3 justify-end">
@@ -90,14 +84,7 @@
     </nav>
 
     <header class="hero-height bg-stone-300">
-        <video 
-            autoplay 
-            muted 
-            loop 
-            playsinline 
-            webkit-playsinline 
-            preload="auto" 
-            class="video-bg">
+        <video autoplay muted loop playsinline webkit-playsinline preload="auto" class="video-bg">
             <source src="website-header.mp4" type="video/mp4" media="(min-width: 1024px)">
             <source src="website-header-mobile.mp4" type="video/mp4">
         </video>
@@ -105,8 +92,8 @@
         <div class="video-overlay"></div>
 
         <div class="relative z-30 h-full w-full flex flex-col items-center justify-center text-center text-white px-8">
-            <h2 class="serif text-4xl md:text-7xl mb-4 tracking-tighter leading-tight drop-shadow-sm">UNTITLED <br class="md:hidden"> MEDIA COMPANY</h2>
-            <p class="uppercase tracking-[0.4em] text-[9px] md:text-sm font-light opacity-90">CHICAGO — WORLDWIDE</p>
+            <h2 class="script text-6xl md:text-9xl mb-2 drop-shadow-lg">This Thing of Yours</h2>
+            <p class="serif uppercase tracking-[0.5em] text-[10px] md:text-xs font-light opacity-90 drop-shadow-md">CHICAGO — INDIANA</p>
         </div>
     </header>
 
@@ -156,16 +143,16 @@
     </section>
 
     <footer id="contact" class="py-24 text-center border-t border-stone-200 bg-[#F5F2ED] relative z-40">
-        <h3 class="serif text-2xl md:text-3xl mb-6 uppercase tracking-[0.2em]">Let's Tell Your Story</h3>
-        <p class="text-[10px] md:text-xs text-stone-500 mb-12 font-light tracking-[0.3em] uppercase">Now Booking for 2026 & 2027</p>
+        <h3 class="script text-4xl mb-4">This Thing of Yours</h3>
+        <p class="serif text-[10px] md:text-xs text-stone-500 mb-12 font-light tracking-[0.3em] uppercase">Now Booking for 2026 & 2027</p>
         
         <div class="mb-16">
-            <a href="mailto:hello@untitledmedia.com" class="serif italic text-xl md:text-2xl hover:opacity-50 transition-opacity">hello@untitledmedia.com</a>
+            <a href="mailto:hello@thisthingofyours.com" class="serif italic text-xl md:text-2xl hover:opacity-50 transition-opacity">hello@thisthingofyours.com</a>
         </div>
 
         <div class="pt-12 border-t border-stone-200/50 max-w-sm mx-auto">
-            <p class="serif italic text-lg mb-2">Untitled Media Company</p>
-            <p class="text-[9px] uppercase tracking-[0.4em] text-stone-400">Chicago — Worldwide</p>
+            <p class="script text-2xl mb-2">This Thing of Yours</p>
+            <p class="serif text-[9px] uppercase tracking-[0.4em] text-stone-400">Chicago — Indiana</p>
         </div>
     </footer>
 
