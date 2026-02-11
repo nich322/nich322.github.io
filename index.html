@@ -36,6 +36,9 @@
         }
 
         section { position: relative; z-index: 30; }
+        
+        /* Form Focus Styles */
+        input:focus, textarea:focus { border-color: #444 !important; }
     </style>
 </head>
 <body class="sans text-stone-800">
@@ -116,8 +119,8 @@
                     </div>
                     <h3 class="serif text-xl md:text-2xl mb-1">Highlight Reel</h3>
                     <p class="serif italic text-stone-400 text-sm mb-4">$1,000</p>
-                    <p class="text-xs text-stone-500 px-4 font-light leading-relaxed mb-4">A high-energy, 3-5 minute cinematic summary of your entire celebration. Includes complimentary string-out cut.</p>
-                    <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Available Add-on: Night-of Rough Cut (+$1,000)</p>
+                    <p class="text-xs text-stone-500 px-4 font-light leading-relaxed mb-4">A high-energy cinematic summary of your entire celebration. Includes complimentary string-out cut.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Add-on: Night-of Rough Cut (+$1,000)</p>
                 </div>
 
                 <div class="group">
@@ -126,8 +129,8 @@
                     </div>
                     <h3 class="serif text-xl md:text-2xl mb-1">Short Video</h3>
                     <p class="serif italic text-stone-400 text-sm mb-4">$2,500</p>
-                    <p class="text-xs text-stone-500 px-4 font-light leading-relaxed mb-4">An 8-10 minute film capturing key speeches, highlights, and dances. Includes complimentary string-out cut.</p>
-                    <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Available Add-on: Night-of Premiere (+$1,000)</p>
+                    <p class="text-xs text-stone-500 px-4 font-light leading-relaxed mb-4">8-10 minute film capturing key narrative moments. Includes complimentary string-out cut.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Add-on: Night-of Premiere (+$1,000)</p>
                 </div>
 
                 <div class="group">
@@ -136,8 +139,8 @@
                     </div>
                     <h3 class="serif text-xl md:text-2xl mb-1">Long Video</h3>
                     <p class="serif italic text-stone-400 text-sm mb-4">$4,000</p>
-                    <p class="text-xs text-stone-500 px-4 font-light leading-relaxed mb-4">A documentary-style edit including full ceremony and reception toasts. Includes complimentary string-out cut.</p>
-                    <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Available Add-on: Night-of Premiere (+$1,000)</p>
+                    <p class="text-xs text-stone-500 px-4 font-light leading-relaxed mb-4">Documentary-style edit with full ceremony and reception toasts. Includes complimentary string-out cut.</p>
+                    <p class="text-[10px] uppercase tracking-widest text-stone-400 italic">Add-on: Night-of Premiere (+$1,000)</p>
                 </div>
 
             </div>
@@ -145,14 +148,47 @@
         </div>
     </section>
 
-    <footer id="contact" class="py-24 text-center border-t border-stone-200 bg-[#EAE7E2] relative z-40">
-        <h3 class="serif text-2xl md:text-3xl mb-6 uppercase tracking-[0.4em] font-bold">This Thing of Yours</h3>
-        <div class="mb-16">
-            <a href="mailto:hello@thisthingofyours.com" class="serif italic text-xl md:text-2xl hover:opacity-50 transition-opacity">hello@thisthingofyours.com</a>
+    <section id="contact" class="py-24 md:py-44 bg-[#EAE7E2] px-6 border-t border-stone-200">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="serif text-3xl md:text-5xl mb-6 tracking-tight italic">How can we help you today?</h2>
+            <p class="serif text-stone-500 text-xs md:text-sm uppercase tracking-[0.3em] mb-12">Now Booking for 2026 & 2027</p>
+
+            <form action="https://formspree.io/f/xzdadrlb" method="POST" class="text-left space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="serif uppercase text-[10px] tracking-widest text-stone-400 mb-2 block">Name</label>
+                        <input type="text" name="name" required class="w-full bg-transparent border-b border-stone-300 py-3 focus:outline-none transition-colors serif text-lg font-light">
+                    </div>
+                    <div>
+                        <label class="serif uppercase text-[10px] tracking-widest text-stone-400 mb-2 block">Wedding Date</label>
+                        <input type="text" name="date" placeholder="MM.DD.YYYY" class="w-full bg-transparent border-b border-stone-300 py-3 focus:outline-none transition-colors serif text-lg font-light">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="serif uppercase text-[10px] tracking-widest text-stone-400 mb-2 block">Email Address</label>
+                    <input type="email" name="email" required class="w-full bg-transparent border-b border-stone-300 py-3 focus:outline-none transition-colors serif text-lg font-light">
+                </div>
+
+                <div>
+                    <label class="serif uppercase text-[10px] tracking-widest text-stone-400 mb-2 block">Tell us about your story</label>
+                    <textarea name="message" rows="4" required class="w-full bg-transparent border-b border-stone-300 py-3 focus:outline-none transition-colors serif text-lg font-light resize-none"></textarea>
+                </div>
+
+                <div class="text-center pt-8">
+                    <button type="submit" class="inline-block border border-stone-800 px-16 py-5 uppercase tracking-[0.3em] text-[10px] hover:bg-stone-800 hover:text-white transition-all duration-500 ease-in-out cursor-pointer">
+                        Send Inquiry
+                    </button>
+                </div>
+            </form>
         </div>
-        <div class="pt-12 border-t border-stone-300/50 max-w-sm mx-auto">
-            <p class="serif italic text-lg mb-2">This Thing of Yours</p>
+    </section>
+
+    <footer class="py-12 text-center bg-[#EAE7E2] border-t border-stone-300/30">
+        <div class="max-w-sm mx-auto">
+            <h3 class="serif text-lg mb-2 uppercase tracking-[0.4em] font-bold">This Thing of Yours</h3>
             <p class="serif text-[9px] uppercase tracking-[0.4em] text-stone-400">Chicago — Indiana</p>
+            <p class="serif text-[9px] uppercase tracking-[0.4em] text-stone-400 mt-4 opacity-50">© 2026 All Rights Reserved</p>
         </div>
     </footer>
 
